@@ -1,0 +1,95 @@
+
+<html>
+    <head>
+        <title></title>
+        <style>
+            /* Your styles here! */
+            body {
+                font-family: Helvetica;
+            }
+            .container:not(output) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-start;
+                font-style: Helvetica;
+                width: 240px
+                flex-wrap: wrap;
+                border-radius: 5px;
+                border: 1px solid black;
+                padding: 20px;
+
+            }
+            .input {
+                display: flex;
+                flex-direction: column;
+                font-style: Helvetica;
+                font-size: .8em;
+            }
+            .output {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-end;
+                width: 200px;
+            }
+            #amount, #percent {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: flex-start;
+                font-size: 2em;
+                color: #4d4d4d;
+                border-radius: 5px;
+                border: 1px solid black;
+                padding: 20px;
+                height: 8px;
+                width: 150px;
+                background-color: #f2f2f2;
+            }
+            #calculate {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                border-radius: 5px;
+                border: 2px solid #a6a6a6;
+                padding: 20px;
+                height: 2px;
+                width: 193px;
+                background-color: #f2f2f2;
+                font-size: 1em;
+                color: #737373;
+            }
+            #tip, #total {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <p class="input">
+            <label for="amount">Bill</label>
+            <input id="amount" type="number" value="0.00">
+        </p>
+
+        <p class="input">
+            <label for="percent">Tip %</label>
+            <input id="percent" type="number" value="15">
+        </p>
+
+        <button id="calculate">Calculate</button>
+
+        <p class="output">
+            <span>Tip:</span>
+            <span id="tip">0.00</span>
+        </p>
+
+        <p class="output">
+            <span>Total:</span>
+            <span id="total">0.00</span>
+        </p>
+    </div>
+    <script src="main.js"></script>
+    </body>
+</html>
